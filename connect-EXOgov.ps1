@@ -1,3 +1,9 @@
+  #I created this script to do two things, enable basic auth and connect to Exchange Online GCC High. 
+  #If you have federation and MFA setup it is supposed to do SSO with an MFA prompt.
+  #This script will check to see if basic auth is enabled before connecting to EXO (At the time of script creation, basic auth was required)
+  #If basic auth is disabled, the script will prompt for elevation and modify the registry
+  #
+  
   $Status = New-Object -TypeName PSObject # Custom object for status information
 
    function check-basicauth {
