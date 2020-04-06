@@ -43,7 +43,7 @@
    if ($status.BasicAuth -eq 1) {enable-basicauth; check-basicauth}
 
 
-        $upn = (whoami).trimstart("netservices\")+"@sei.cmu.edu"
+        $upn = (whoami).trimstart("NETBIOS\")+"@<fqdn>"
         $EXO = "https://outlook.office365.us/powershell-liveid"
         $AzureAD = "https://login.microsoftonline.us/common"
         $ProxyOptions = New-PSSessionOption -ProxyAccessType AutoDetect
